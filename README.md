@@ -25,3 +25,15 @@ This infrastructure provides a unified starting point for the development team (
 ```bash
 git clone git@github.com:Hossein558/Aspose.Total-for-Java.git
 cd "Aspose.Total-for-Java"
+
+## 🐳 Docker Integration (Time-Frozen Environment)
+This project is fully containerized using **Java 21** and `libfaketime` to create an isolated environment where the system clock is permanently frozen before the temporary license expiration date.
+
+*   **Docker Hub Repository:** `desktopcenter/aspose-faketime`
+*   **Java Tag:** `java21`
+
+**To pull and run the pre-built image:**
+
+    docker pull desktopcenter/aspose-faketime:java21
+    docker run --rm desktopcenter/aspose-faketime:java21
+
