@@ -153,7 +153,7 @@
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-tex</artifactId>
-            <version>26.6</version>
+            <version>26.10</version>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
@@ -166,6 +166,11 @@
             <artifactId>aspose-zip</artifactId>
             <version>26.3</version>
             <classifier>jdk18</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>3.30.2-GA</version>
         </dependency>
         <!--aspose.com dependencies end here.-->
     </dependencies>
