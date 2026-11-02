@@ -5,6 +5,9 @@ public class AsposeLicenseTester {
     public static void main(String[] args) {
         // نام دقیق فایل لایسنس بر اساس خروجی مسیر شما
         String licensePath = "Aspose.TotalforJava.lic";
+        if (new java.io.File(licensePath).exists()) {
+            licensePath = new java.io.File(licensePath).getAbsolutePath();
+        }
         
         String[] asposeLicenseClasses = {
             "com.aspose.threed.License",

@@ -53,21 +53,26 @@ public class AsposeAgent {
 
                     boolean modified = false;
 
-                    // 1. Aspose.3D (com.aspose.threed.ie & License)
-                    if (className.equals("com/aspose/threed/ie")) {
+                    // 1. Aspose.3D (com.aspose.threed.ie, iz & License)
+                    if (className.equals("com/aspose/threed/ie") || className.equals("com/aspose/threed/iz")) {
                         for (CtMethod m : cc.getDeclaredMethods()) {
                             if (m.getName().equals("a") && m.getReturnType() == CtClass.booleanType) {
                                 m.setBody("{ return true; }");
                                 modified = true;
                             } else if (m.getName().equals("a") && m.getParameterTypes().length == 0 &&
                                        m.getReturnType().getName().equals("byte[]")) {
-                                m.setBody("{ return com.aspose.threed.if.b; }");
+                                m.setBody("{\n" +
+                                          "    try {\n" +
+                                          "        return com.aspose.threed.iA.b;\n" +
+                                          "    } catch (Throwable t) {\n" +
+                                          "        return com.aspose.threed.if.b;\n" +
+                                          "    }\n" +
+                                          "}");
                                 modified = true;
                             } else if (m.getName().equals("a") && m.getParameterTypes().length == 2 &&
                                        m.getParameterTypes()[0].getName().equals("java.lang.String")) {
                                 m.setBody("{\n" +
                                           "    f = this;\n" +
-                                          "    this.e = com.aspose.threed.if.b;\n" +
                                           "    return;\n" +
                                           "}");
                                 modified = true;
@@ -75,7 +80,6 @@ public class AsposeAgent {
                                        m.getParameterTypes()[0].getName().equals("java.io.InputStream")) {
                                 m.setBody("{\n" +
                                           "    f = this;\n" +
-                                          "    this.e = com.aspose.threed.if.b;\n" +
                                           "    return;\n" +
                                           "}");
                                 modified = true;
@@ -117,8 +121,8 @@ public class AsposeAgent {
                         }
                     }
 
-                    // 3. Aspose.Cells (com.aspose.cells.b0n)
-                    if (className.equals("com/aspose/cells/b0n")) {
+                    // 3. Aspose.Cells (com.aspose.cells.b0n & r0l)
+                    if (className.equals("com/aspose/cells/b0n") || className.equals("com/aspose/cells/r0l")) {
                         for (CtMethod m : cc.getDeclaredMethods()) {
                             if (m.getName().equals("a") && m.getParameterTypes().length == 1 &&
                                 m.getParameterTypes()[0].getName().equals("org.w3c.dom.Document")) {
@@ -135,7 +139,7 @@ public class AsposeAgent {
                         }
                     }
 
-                    // 4. Aspose.Words (com.aspose.words.zzWc5 and zzF5)
+                    // 4. Aspose.Words (26.6 zzWc5, zzF5 & 26.8 zzWdb, zzXCp, zzOs)
                     if (className.equals("com/aspose/words/zzWc5")) {
                         for (CtMethod m : cc.getDeclaredMethods()) {
                             if (m.getName().equals("zzWVT") && m.getReturnType() == CtClass.booleanType) {
@@ -161,6 +165,36 @@ public class AsposeAgent {
                             }
                         }
                     }
+                    if (className.equals("com/aspose/words/zzWdb") || className.equals("com/aspose/words/zzXCp")) {
+                        for (CtMethod m : cc.getDeclaredMethods()) {
+                            if ((m.getName().equals("zzZdx") || m.getName().equals("zzXtw")) && m.getReturnType() == CtClass.booleanType) {
+                                m.setBody("{ return false; }");
+                                modified = true;
+                            }
+                        }
+                    }
+                    if (className.equals("com/aspose/words/zzOs")) {
+                        for (CtMethod m : cc.getDeclaredMethods()) {
+                            if (m.getName().equals("zzZTg") && m.getReturnType() == CtClass.booleanType) {
+                                m.setBody("{ return true; }");
+                                modified = true;
+                            } else if (m.getName().equals("zzZdf") && m.getReturnType().getName().equals("byte[]")) {
+                                m.setBody("{ return com.aspose.words.zzVWz.zzZXL; }");
+                                modified = true;
+                            }
+                        }
+                    }
+                    if (className.equals("com/aspose/words/zzYgg")) {
+                        for (CtMethod m : cc.getDeclaredMethods()) {
+                            if (m.getName().equals("zzWaz") || m.getName().equals("zzYNw") || m.getName().equals("zzYuK")) {
+                                m.setBody("{ return; }");
+                                modified = true;
+                            } else if ((m.getName().equals("zzX3P") || m.getName().equals("zzYdr")) && m.getReturnType().getName().equals("byte[]")) {
+                                m.setBody("{ return com.aspose.words.zzVT1.zzX40; }");
+                                modified = true;
+                            }
+                        }
+                    }
 
                     // 5. Aspose.Words (zzIz)
                     if (className.equals("com/aspose/words/zzIz")) {
@@ -176,10 +210,7 @@ public class AsposeAgent {
                     if (className.equals("com/aspose/words/zzZe6")) {
                         for (CtMethod m : cc.getDeclaredMethods()) {
                             if (m.getName().equals("zzZZQ") || m.getName().equals("zzPB")) {
-                                m.setBody("{ if ($1 == null) { zzYNp = 29273535023874148L; } return; }");
-                                modified = true;
-                            } else if (m.getName().equals("zzZkk") || m.getName().equals("zzYPa")) {
-                                m.setBody("{ return; }");
+                                m.setBody("{ zzYNp = 29273535023874148L; return; }");
                                 modified = true;
                             } else if (m.getName().equals("zzQr") && m.getReturnType() == CtClass.booleanType) {
                                 m.setBody("{ return true; }");

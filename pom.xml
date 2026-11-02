@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.aspose</groupId>
     <artifactId>aspose-total</artifactId>
-    <version>26.6</version>
+    <version>26.8</version>
     
     <packaging>jar</packaging>
     
@@ -28,7 +28,7 @@
     </licenses>
 
     <properties>
-        <release.version>26.6</release.version>
+        <release.version>26.8</release.version>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
@@ -43,29 +43,29 @@
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-3d</artifactId>
-            <version>26.6.0</version>
+            <version>26.8.0</version>
             <classifier>jdk8</classifier>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-barcode</artifactId>
-            <version>26.6</version>
+            <version>26.8</version>
             <classifier>jdk18</classifier>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-cad</artifactId>
-            <version>26.6</version>
+            <version>26.8</version>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-cells</artifactId>
-            <version>26.6</version>
+            <version>26.8</version>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-diagram</artifactId>
-            <version>26.6</version>
+            <version>26.8</version>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
@@ -75,39 +75,39 @@
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-email</artifactId>
-            <version>26.5</version>
+            <version>26.8</version>
             <classifier>jdk16</classifier>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-font</artifactId>
-            <version>26.6</version>
+            <version>26.8</version>
         </dependency>
         
-        <!-- اصلاح aspose-html به jdk17 جهت جلوگیری از خطای ورژن جاوا -->
+        <!-- aspose-html jdk17 classifier -->
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-html</artifactId>
-            <version>26.6</version>
+            <version>26.8</version>
             <classifier>jdk17</classifier>
         </dependency>
         
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-imaging</artifactId>
-            <version>26.6</version>
+            <version>26.8</version>
             <classifier>jdk18</classifier>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-note</artifactId>
-            <version>26.4</version>
+            <version>26.8</version>
             <classifier>jdk17</classifier>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-ocr</artifactId>
-            <version>26.5.0</version>
+            <version>26.8.0</version>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
@@ -117,17 +117,17 @@
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-page</artifactId>
-            <version>26.6</version>
+            <version>26.8</version>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-pdf</artifactId>
-            <version>26.6</version>
+            <version>26.8</version>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-psd</artifactId>
-            <version>26.6</version>
+            <version>26.8</version>
             <classifier>jdk16</classifier>
         </dependency>
         <dependency>
@@ -136,18 +136,17 @@
             <version>22.8</version>
         </dependency>
         
-        <!-- اصلاح aspose-slides و بازگردانی به jdk16 -->
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-slides</artifactId>
-            <version>26.6</version>
+            <version>26.8</version>
             <classifier>jdk16</classifier>
         </dependency>
         
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-tasks</artifactId>
-            <version>26.6</version>
+            <version>26.8</version>
             <classifier>jdk18</classifier>
         </dependency>
         <dependency>
@@ -158,14 +157,13 @@
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-words</artifactId>
-            <version>26.6</version>
+            <version>26.8</version>
             <classifier>jdk17</classifier>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-zip</artifactId>
-            <version>26.3</version>
-            <classifier>jdk18</classifier>
+            <version>26.7</version>
         </dependency>
         <dependency>
             <groupId>org.javassist</groupId>
